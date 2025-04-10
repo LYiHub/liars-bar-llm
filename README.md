@@ -4,7 +4,7 @@
 
 ## 文件结构
 
-程序主要分为两部分，游戏主体和分析工具
+程序主要分为三部分，游戏主体、分析工具和测试。
 
 ### 游戏主体
 
@@ -25,6 +25,30 @@
 `player_matchup_analyze.py` 用于提取互为对手的AI间的对局记录进行分析
 
 `json_convert.py` 用于将json游戏记录转为可读文本
+
+### 测试
+
+所有的测试位于`test`文件夹中
+
+运行前先安装
+
+```bash
+pip install -r ./test/requirements.txt
+```
+
+运行全部测试：
+
+```bash
+
+pytest tests/ -v --cov=.
+
+```
+
+生成HTML报告：
+
+```bash
+pytest --cov=. --cov-report=html
+```
 
 ## 配置
 
